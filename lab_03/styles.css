@@ -1,0 +1,92 @@
+body {
+    margin: 20px;
+}
+h1 {
+    color:darkslategrey;
+    font-family: "Helvetica", Arial, sans-serif;
+    font-weight: bold;
+    border-bottom: 5px solid darkcyan;
+}
+
+h2 {
+    color: darkslategrey;
+    font-family: "Helvetica", Arial, sans-serif;
+    font-weight: bold;
+    border-bottom: 2px solid darkcyan;
+}
+
+h3 {
+    color: black;
+    font-family: "Helvetica", Arial, sans-serif;
+    font-weight: bold;
+}
+
+h4 {
+    color: darkslategrey;
+    font-family: "Helvetica", Arial, sans-serif;
+    font-weight: normal;
+    margin-left: 20px;
+}
+
+h5 {
+    color: darkcyan;
+    font-family: "Helvetica", Arial, sans-serif;
+    font-weight: normal;
+    font-style: italic;
+    margin-left: 20px;
+}
+
+p {
+    font-family: "Helvetica", Arial, sans-serif;
+    font-weight: normal;
+}
+
+ul {
+    margin-left: 10px;
+}
+
+ul li.super {
+    font-family: "Helvetica", Arial, sans-serif;
+    font-weight: normal;
+    list-style: disc outside;
+}
+
+ul li.sub {
+    font-family: "Helvetica", Arial, sans-serif;
+    font-weight: normal;
+    list-style: circle outside;
+    margin-left: 20px;
+}
+
+.lower {
+    margin-bottom: 0;
+}
+
+.upper {
+    margin-top: 0;
+}
+
+.personal{
+    margin-top: -10;
+    margin-left: 10;
+}
+
+a:link {
+    text-decoration: none;
+    color: black;
+}
+
+a:visited {
+text-decoration: none;
+color: black;
+}
+
+a:hover {
+text-decoration: underline;
+color:darkcyan
+}
+
+a:active {
+text-decoration: underline;
+color:darkcyan
+}
