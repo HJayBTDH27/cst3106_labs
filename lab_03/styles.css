@@ -1,0 +1,57 @@
+h1 {
+    color:darkslategrey;
+    font-family: "Helvetica", Arial, sans-serif;
+    font-weight: normal;
+    text-decoration-line: underline;
+    text-decoration-color:darkcyan;
+    text-decoration-style: solid;
+    text-decoration-thickness: 5%;
+}
+
+h2 {
+    color: darkslategrey;
+    font-family: "Helvetica", Arial, sans-serif;
+    font-weight: bold;
+}
+
+h3 {
+    color: black;
+    font-family: "Helvetica", Arial, sans-serif;
+    font-weight: bold;
+}
+
+h4 {
+    color: darkslategrey;
+    font-family: "Helvetica", Arial, sans-serif;
+    font-weight: normal;
+}
+
+h5 {
+    color: darkcyan;
+    font-family: "Helvetica", Arial, sans-serif;
+    font-weight: normal;
+    font-style: italic;
+}
+
+p {
+    font-family: "Helvetica", Arial, sans-serif;
+    font-weight: normal;
+}
+
+ul {
+    margin-left: 10px;
+}
+
+ul li.super {
+    font-family: "Helvetica", Arial, sans-serif;
+    font-weight: normal;
+    list-style: disc outside;
+}
+
+ul li.sub {
+    font-family: "Helvetica", Arial, sans-serif;
+    font-weight: normal;
+    list-style: circle outside;
+    margin-left: 20px;
+}
+
