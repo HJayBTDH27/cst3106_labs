@@ -24,7 +24,6 @@ ___
 ### Navigation Menu
 - Design: Hamburger-stack expanding menu. Left-justified text. Light steel blue background with cadet blue border. Black links with no underline. Expand across bottom of header on desktop, expand down on mobile.
 - **Mock-up Screenshot: (see above)**
-![Navbar (within header) Mock-up]
 
 ### Sidebar
 - Design: Light steel blue background.
