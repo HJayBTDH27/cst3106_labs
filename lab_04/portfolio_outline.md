@@ -19,7 +19,7 @@ ___
 ### Header
 - Design: Light steel blue background with left justified text. Demarcation line spanning the length of the display with a 2% margin on either side
 - **Mock-up Screenshot:**
-![Header Mock-up](headerAndNavbar.png)
+![Header Mock-up]
 
 ### Navigation Menu
 - Design: Hamburger-stack expanding menu. Left-justified text. Light steel blue background with cadet blue border. Black links with no underline. Expand across bottom of header on desktop, expand down on mobile.
@@ -33,7 +33,7 @@ ___
 ### Content
 - Centered black text on white background.
 - **Mock-up Screenshot:**
-![Main Content Mock-up](mainContent.png)
+![Main Content Mock-up]
 
 ### Footer
 - Dark slate background with white text and links. No underlines.
