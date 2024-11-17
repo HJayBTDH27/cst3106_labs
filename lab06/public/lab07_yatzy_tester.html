@@ -1,0 +1,36 @@
+
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yatzy! Tester!</title>
+</head>
+
+
+
+<body>
+    <h1>Yahtzee Score Testing!</h1>
+    <button onclick="testFunction()">Roll Dice!</button>
+    <p id="result"></p>
+    <p>roll
+        <script>
+            async function testFunction() {
+                const rollButton = document.querySelector('button');
+                rollButton.disable = true;
+                try {
+                    let response = await fetch(`/roll-dices`);
+                    let data = await response.json();
+                    const resultElement = document.getElementById('result');
+                    resultElement.textContent = JSON.stringify(data.diceValues);
+                    rollButton.disabled = false; 
+                } catch (error) {
+                    console.error('Error fetching dice value:', error);
+                }
+            }
+        </script>
+        
+    </p>
+
+</body>

@@ -6,11 +6,8 @@ function rollDice() {
 }
 
 function rollFiveDice() {
-
     for (let i = 0; i < 5; i++) {
-
         diceValues[i] = rollDice();
-
     }
 
 }
