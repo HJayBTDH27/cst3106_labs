@@ -7,7 +7,7 @@
 scale=1.0">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <style>
-        /* Styles for the dice container and individual dice */
+        /* Styles for the dice container and individual dice from provided example */
         #diceContainer {
             display: flex;
             gap: 10px;
@@ -47,7 +47,9 @@ scale=1.0">
 
 <body>
     <h1>Look at 'em ROLL!</h1>
-
+<!-- Code from provided example.
+    Augmentations include: Adding four more die elements.
+        giving unique ids to each element. -->
     <div id="diceContainer">
         <div id="die1" class="die" data-value="1">
             <div class="dot" style="top: 25%; left: 25%;"></div>
@@ -92,10 +94,14 @@ scale=1.0">
     </div>
 
     <button id="rollDiceButton">Click to Roll!</button>
-
+    <!-- The <p> element where I will print the diceValues array. -->
     <p id="diceArray"></p>
 
     <script>
+        /* Code from provided example.
+        Augmentations include: diceValues array to contain each generated value.
+            nesting the roll function into the array assignment.
+            printing the values array to the html. */ 
         $(document).ready(function () {
             $("#rollDiceButton").click(function () {
                 let diceValues = [0, 0, 0, 0, 0];
@@ -105,7 +111,9 @@ scale=1.0">
                 $(this).show();
             });
         });
-
+        /* Function from my Yatzy program. Augmented to remove all dots when invoked.
+            Dot removal was moved to first function to prevent removing all dots
+            during second function and ending up with one remaining die. */
         function rollFiveDice() {
             let array = [0, 0, 0, 0, 0];
             $('.dot').remove();
@@ -114,7 +122,9 @@ scale=1.0">
             }
             return array;
         }
-
+        /* Code from provided example. 
+        Augmentations include a parameter for the function,
+            and coding that parameter to specify the appropriate die element.*/
         function rollDie( i ) {
 
             let x = Math.floor(Math.random() * 6) + 1;
@@ -122,6 +132,7 @@ scale=1.0">
 
             $(`#die${i}`).css('transform', 'rotate(' + degreeRotation + ')');
 
+            /* Switch code from provided example. Adjusted for my language and functionality */
             switch (x) {
                 case 1:
                     $(`#die${i}`).append('<div class="dot" style="top: 50%; left: 50%; transform: translate(-50%, -50%);"></div>');
@@ -157,6 +168,7 @@ scale=1.0">
                     $(`#die${i}`).append('<div class="dot" style="bottom: 25%; right: 25%;"></div>');
                     break;
             }
+            // Return the random die value to fill the dice array
             return x;
         }
     </script>
