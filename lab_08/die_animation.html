@@ -100,69 +100,61 @@ scale=1.0">
             $("#rollDiceButton").click(function () {
                 let diceValues = [0, 0, 0, 0, 0];
                 $(this).hide();
-                // rollFiveDice();
                 diceValues = [...rollFiveDice()];
                 $("#diceArray").text("Rolled Array: " + diceValues);
                 $(this).show();
-                // rollDie();
             });
         });
-        
-        // let diceValues = [0, 0, 0, 0, 0];
 
         function rollFiveDice() {
             let array = [0, 0, 0, 0, 0];
+            $('.dot').remove();
             for (let i = 0; i < 5; i++) {
                 array[i] = rollDie( (i+1) );
             }
             return array;
         }
 
-        // diceValues = [...rollFiveDice()];
-
         function rollDie( i ) {
 
             let x = Math.floor(Math.random() * 6) + 1;
             let degreeRotation = (Math.floor(Math.random() * 360) + 1) + "deg"; 
 
-            $('.die').attr( 'data-value', i );
-            $('.die').css('transform', 'rotate(' + degreeRotation + ')');
-
-            $('.dot').remove();
+            $(`#die${i}`).css('transform', 'rotate(' + degreeRotation + ')');
 
             switch (x) {
                 case 1:
-                    $('.die').append('<div class="dot" style="top: 50%; left: 50%; transform: translate(-50%, -50%);"></div>');
+                    $(`#die${i}`).append('<div class="dot" style="top: 50%; left: 50%; transform: translate(-50%, -50%);"></div>');
                     break;
                 case 2:
-                    $('.die').append('<div class="dot" style="top: 25%; left: 25%;"></div>');
-                    $('.die').append('<div class="dot" style="bottom: 25%; right: 25%;"></div>');
+                    $(`#die${i}`).append('<div class="dot" style="top: 25%; left: 25%;"></div>');
+                    $(`#die${i}`).append('<div class="dot" style="bottom: 25%; right: 25%;"></div>');
                     break;
                 case 3:
-                    $('.die').append('<div class="dot" style="top: 25%; left: 25%;"></div>');
-                    $('.die').append('<div class="dot" style="top: 50%; left: 50%; transform: translate(-50%, -50%);"></div>');
-                    $('.die').append('<div class="dot" style="bottom: 25%; right: 25%;"></div>');
+                    $(`#die${i}`).append('<div class="dot" style="top: 25%; left: 25%;"></div>');
+                    $(`#die${i}`).append('<div class="dot" style="top: 50%; left: 50%; transform: translate(-50%, -50%);"></div>');
+                    $(`#die${i}`).append('<div class="dot" style="bottom: 25%; right: 25%;"></div>');
                     break;
                 case 4:
-                    $('.die').append('<div class="dot" style="top: 25%; left: 25%;"></div>');
-                    $('.die').append('<div class="dot" style="top: 25%; right: 25%;"></div>');
-                    $('.die').append('<div class="dot" style="bottom: 25%; left: 25%;"></div>');
-                    $('.die').append('<div class="dot" style="bottom: 25%; right: 25%;"></div>');
+                    $(`#die${i}`).append('<div class="dot" style="top: 25%; left: 25%;"></div>');
+                    $(`#die${i}`).append('<div class="dot" style="top: 25%; right: 25%;"></div>');
+                    $(`#die${i}`).append('<div class="dot" style="bottom: 25%; left: 25%;"></div>');
+                    $(`#die${i}`).append('<div class="dot" style="bottom: 25%; right: 25%;"></div>');
                     break;
                 case 5:
-                    $('.die').append('<div class="dot" style="top: 25%; left: 25%;"></div>');
-                    $('.die').append('<div class="dot" style="top: 25%; right: 25%;"></div>');
-                    $('.die').append('<div class="dot" style="top: 50%; left: 50%; transform: translate(-50%, -50%);"></div>');
-                    $('.die').append('<div class="dot" style="bottom: 25%; left: 25%;"></div>');
-                    $('.die').append('<div class="dot" style="bottom: 25%; right: 25%;"></div>');
+                    $(`#die${i}`).append('<div class="dot" style="top: 25%; left: 25%;"></div>');
+                    $(`#die${i}`).append('<div class="dot" style="top: 25%; right: 25%;"></div>');
+                    $(`#die${i}`).append('<div class="dot" style="top: 50%; left: 50%; transform: translate(-50%, -50%);"></div>');
+                    $(`#die${i}`).append('<div class="dot" style="bottom: 25%; left: 25%;"></div>');
+                    $(`#die${i}`).append('<div class="dot" style="bottom: 25%; right: 25%;"></div>');
                     break;
                 case 6:
-                    $('.die').append('<div class="dot" style="top: 25%; left: 25%;"></div>');
-                    $('.die').append('<div class="dot" style="top: 25%; right: 25%;"></div>');
-                    $('.die').append('<div class="dot" style="top: 50%; left: 25%; transform: translate(0, -50%);"></div>');
-                    $('.die').append('<div class="dot" style="top: 50%; right: 25%; transform: translate(0, -50%);"></div>');
-                    $('.die').append('<div class="dot" style="bottom: 25%; left: 25%;"></div>');
-                    $('.die').append('<div class="dot" style="bottom: 25%; right: 25%;"></div>');
+                    $(`#die${i}`).append('<div class="dot" style="top: 25%; left: 25%;"></div>');
+                    $(`#die${i}`).append('<div class="dot" style="top: 25%; right: 25%;"></div>');
+                    $(`#die${i}`).append('<div class="dot" style="top: 50%; left: 25%; transform: translate(0, -50%);"></div>');
+                    $(`#die${i}`).append('<div class="dot" style="top: 50%; right: 25%; transform: translate(0, -50%);"></div>');
+                    $(`#die${i}`).append('<div class="dot" style="bottom: 25%; left: 25%;"></div>');
+                    $(`#die${i}`).append('<div class="dot" style="bottom: 25%; right: 25%;"></div>');
                     break;
             }
             return x;
